@@ -1,14 +1,17 @@
-import React from "react";
-import cx from "clsx";
+import React from 'react';
+import cx from 'clsx';
 type SectionProps = {
-  children: React.ReactNode;
-  className?: string; // Cho phép nhận class tùy chỉnh
+    children: React.ReactNode;
+    className?: string; // Cho phép nhận class tùy chỉnh
+    ref?: React.Ref<HTMLDivElement>;
 };
 
 const Section: React.FC<SectionProps> = ({ children, className }) => {
-  return (
-    <section className={cx("sm:py-32 py-24", className)}>{children}</section>
-  );
+    return (
+        <section className={cx('sm:py-32 py-24', className)}>
+            {children}
+        </section>
+    );
 };
 
 export default Section;

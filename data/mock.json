@@ -3,15 +3,16 @@
         "menuItems": [
             { "label": "Home", "url": "/" },
             { "label": "Activities", "url": "/activities" },
-            { "label": "Sport Website", "url": "/" },
+            { "label": "Workshops", "url": "/workshops" },
             { "label": "About", "url": "/about" },
             { "label": "Contact", "url": "/contact" }
         ]
     },
     "footer": {
         "menuItems": [
-            { "label": "Locations", "url": "/locations" },
-            { "label": "Fitness", "url": "/fitness" },
+            { "label": "Home", "url": "/home" },
+            { "label": "Activities", "url": "/activities" },
+            { "label": "Workshops", "url": "/workshops" },
             { "label": "About", "url": "/about" },
             { "label": "Contact", "url": "/contact" }
         ]
@@ -20,9 +21,9 @@
         {
             "id": 1,
             "image": "/images/about.jpg",
-            "location": "Los Angeles, CA",
-            "name": "Bruno Truong",
-            "description": "With 18 years of coaching under her belt, Sarah is known for her ability to develop young talent, guiding players to reach their full potential on the court."
+            "location": "Quan 3, Ho Chi Minh City",
+            "name": "Quyen Tu Le",
+            "description": "With 2 years in community service, Quyen is passionate about creating visually stunning and user-friendly recycle products."
         },
         {
             "id": 2,
