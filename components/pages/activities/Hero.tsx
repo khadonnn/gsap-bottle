@@ -50,7 +50,7 @@ const Hero = ({
                         loop
                     >
                         <source
-                            src={hero?.heroVideo || '/videos/hero_video.mp4'}
+                            src={hero?.heroVideo || '/videos/hero_recycle.mp4'}
                             type='video/mp4'
                         />
                         Your browser does not support the video tag.
@@ -74,7 +74,7 @@ const Hero = ({
                 </div>
             </div>
             <div className='sticky top-0 min-h-[100vh] -mt-[200vh] flex items-center justify-center'>
-                <div className='max-w-[60rem] text-center mx-auto'>
+                <div className='max-w-[60rem] text-center mx-auto mt-3'>
                     <h2 className='sm:text-[7rem] text-title uppercase font-coolvetica font-bold'>
                         <span className='text-highlight-green'>&quot;</span>
                         {highlight?.heading}

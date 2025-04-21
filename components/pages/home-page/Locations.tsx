@@ -21,12 +21,16 @@ const Locations = () => {
                             Our Activities
                         </h2>
                         <p className='text-white font-satoshi'>
-                            Ready to take your tennis game to the next level?
-                            Experience world-class coaching, state-of-the-art
-                            facilities, and a vibrant tennis community. Enroll
-                            today and become part of a legacy of excellence.
+                            Workshop: Get hands-on in our cozy crafting corner —
+                            a space to relax, create, and connect. Handcrafted
+                            Candles: Pour your own candle with custom scents and
+                            take home a little glow of the night. Unique Vases:
+                            Personalize ceramic vases with paints and patterns —
+                            no two pieces alike! Sustainable Crafts: Create
+                            beautiful keepsakes using upcycled materials — fun,
+                            mindful, and earth-friendly.
                         </p>
-                        <Button className='w-fit'>Explore Academy</Button>
+                        <Button className='w-fit'>JOIN with us </Button>
                     </div>
                     <div className='grid sm:grid-cols-2 gap-6'>
                         {locations.map((item, index) => {

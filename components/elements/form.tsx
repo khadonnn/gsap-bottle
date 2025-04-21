@@ -149,7 +149,7 @@ const Form: React.FC<FormData> = () => {
             <Button
                 onClick={() => handleSubmit}
                 className={cx(
-                    'uppercase font-light col-span-2 py-4 mt-5',
+                    'uppercase font-light col-span-2 py-4 mt-5 hover:bg-green-800',
                     isLoading === true && 'cursor-not-allowed',
                 )}
             >

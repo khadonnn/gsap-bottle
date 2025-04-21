@@ -78,7 +78,7 @@ const Hero = () => {
                                 loop
                             >
                                 <source
-                                    src='/videos/hero_video.mp4'
+                                    src='/videos/hero_recycle.mp4'
                                     type='video/mp4'
                                 />
                                 Your browser does not support the video tag.

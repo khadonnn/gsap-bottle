@@ -4,7 +4,11 @@ import Section from '@/components/layouts/section';
 import Container from '@/components/layouts/container';
 import Image from 'next/image';
 import Hero from '@/components/pages/activities/Hero';
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const hero = {
     title: 'Welcome to Our Fitness Center',
@@ -46,6 +50,35 @@ type FacilitiType = {
 
 const FitnessPage = () => {
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
+    const facilitiesRef = useRef<HTMLDivElement>(null); // Ref for facilities section
+
+    useEffect(() => {
+        const facilitiesElems =
+            facilitiesRef.current?.querySelectorAll('.facility'); // Query all facility items
+        if (!facilitiesElems) return;
+
+        // Loop through each facility item and animate it
+        gsap.fromTo(
+            facilitiesElems,
+            {
+                y: 100, // Start from below
+                opacity: 0,
+            },
+            {
+                y: 0, // End at the original position
+                opacity: 1,
+                duration: 1,
+                ease: 'power3.out',
+                stagger: 0.3, // Stagger the animation for each item
+                scrollTrigger: {
+                    trigger: facilitiesRef.current,
+                    start: 'top 80%',
+                    toggleActions: 'play none none reverse',
+                },
+            },
+        );
+    }, []);
+
     return (
         <React.Fragment>
             <Hero hero={hero} highlight={sectionHighlight} />
@@ -56,10 +89,13 @@ const FitnessPage = () => {
                             {facilities.heading}
                         </h2>
                     </div>
-                    <div className='grid grid-cols-1 sm:grid-cols-3 mt-12 gap-12'>
+                    <div
+                        ref={facilitiesRef}
+                        className='grid grid-cols-1 sm:grid-cols-3 mt-24 gap-12'
+                    >
                         {facilities.ourFacilities.map(
                             (faciliti: FacilitiType, index: number) => (
-                                <div key={index}>
+                                <div key={index} className='facility'>
                                     <div
                                         className='relative drop-shadow-sm hover:drop-shadow-lg hover:scale-105  transition-transform duration-300 aspect-square rounded-3xl overflow-hidden flex items-end cursor-pointer border'
                                         onClick={() =>

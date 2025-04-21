@@ -10,11 +10,14 @@ import { useWindowSize } from 'usehooks-ts';
 
 const Header = () => {
     const [showMenu, setShowMenu] = useState(false);
+    const [isClient, setIsClient] = useState(false);
 
     const toggleMenu = () => {
         setShowMenu((prev) => !prev);
     };
-
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
     const size = useWindowSize();
 
     useEffect(() => {
@@ -22,7 +25,7 @@ const Header = () => {
             setShowMenu(false);
         }
     }, [size.width]);
-
+    if (!isClient) return null;
     return (
         <nav className='flex w-screen items-center justify-between sm:justify-center p-6 border-b'>
             <ul

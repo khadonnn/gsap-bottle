@@ -109,3 +109,15 @@ span {
 .delay-2 {
     animation-delay: 0.8s;
 }
+
+/*  scroll*/
+.coaches-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.register-container {
+    height: 100vh;
+    overflow: hidden;
+}
