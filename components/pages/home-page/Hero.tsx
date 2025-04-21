@@ -7,6 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 import { useGSAP } from '@gsap/react';
 import Section from '@/components/layouts/section';
 import Container from '@/components/layouts/container';
+import Link from 'next/link';
 
 const Hero = () => {
     const videoWrapRef = useRef(null);
@@ -50,25 +51,26 @@ const Hero = () => {
                         className='flex flex-col h-[90%] w-[90%] rounded-3xl overflow-hidden sm:h-[90%] sm:w-[90%]  justify-center sticky top-0 z-10 items-center'
                     >
                         <div className='flex relative z-10 flex-col justify-center items-center h-full'>
-                            <p className='font-coolvetica text-title uppercase text-white'>
+                            {/* <p className='font-coolvetica text-title uppercase text-white'>
                                 Learn More
-                            </p>
+                            </p> */}
                             {/* button loop */}
-                            <div className='relative flex items-center justify-center'>
-                                <span className='pulse-circle absolute w-16 h-16 rounded-full bg-highlight-green opacity-50 animate-ping-slow'></span>
-                                <span className='pulse-circle delay-1 absolute w-16 h-16 rounded-full bg-highlight-green opacity-50 animate-ping-slow'></span>
-
-                                <button className='z-10 bg-highlight-green rounded-full p-6 text-black material-symbols-outlined'>
-                                    arrow_downward
-                                </button>
-                            </div>
                         </div>
-                        <p
-                            className='text-features z-10 font-coolvetica bottom-0 uppercase text-white absolute'
-                            style={{ wordSpacing: '1rem' }}
-                        >
-                            your bottle story - 2025
-                        </p>
+                        <Link href='#activities'>
+                            <div
+                                className='text-features z-10 font-coolvetica bottom-0 uppercase text-white absolute'
+                                style={{ wordSpacing: '1rem' }}
+                            >
+                                <div className='relative flex items-center justify-center mb-3'>
+                                    <span className='pulse-circle absolute w-16 h-16 rounded-full bg-highlight-green opacity-50 animate-ping-slow'></span>
+                                    <span className='pulse-circle delay-1 absolute w-16 h-16 rounded-full bg-highlight-green opacity-50 animate-ping-slow'></span>
+
+                                    <button className='z-10 bg-highlight-green rounded-full p-6 text-black material-symbols-outlined'>
+                                        arrow_downward
+                                    </button>
+                                </div>
+                            </div>
+                        </Link>
                         <div className='h-full w-full overflow-hidden absolute items-start top-0'>
                             <video
                                 autoPlay

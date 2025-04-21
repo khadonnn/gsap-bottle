@@ -59,14 +59,14 @@ const Hero = ({
                 <div className='relative p-12'>
                     <div className='text-white flex sm:flex-row flex-col sm:items-end'>
                         <h1 className='text-hero font-coolvetica uppercase mr-12 leading-none'>
-                            {hero?.heading || 'Active'}
+                            {hero?.heading || 'Our Journey'}
                         </h1>
                         <div className=''>
                             <p className='mb-6 text-xl sm:w-1/2'>
                                 {hero?.tagline ||
                                     'In our recycling project, one of the most creative and inspiring activities is turning used plastic bottles into unique decorative items'}
                             </p>
-                            <Button className='w-fit'>
+                            <Button className='w-fit text-black'>
                                 {hero?.cta || 'Explore More'}
                             </Button>
                         </div>

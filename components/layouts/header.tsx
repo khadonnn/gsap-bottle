@@ -44,7 +44,7 @@ const Header = () => {
                         <Link className=' text-3xl' href={item.url}>
                             {item.label}
                         </Link>
-                        <div className='bg-highlight-green h-[0.3rem] left-0 top-2/3 absolute group-hover:w-full w-0 duration-300 p-0'></div>
+                        <div className='bg-highlight-green h-[0.5rem] left-0 top-2/3 absolute group-hover:w-full w-0 duration-300 p-0'></div>
                     </li>
                 ))}
             </ul>

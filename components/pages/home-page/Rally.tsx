@@ -21,8 +21,8 @@ const Rally = () => {
                 scroller: 'body',
                 trigger: imageWrapRef.current,
                 scrub: true,
-                start: '-200% top',
-                end: '-100% top',
+                start: '-100% top',
+                end: '-80% top',
                 toggleActions: 'play reverse play reverse',
             },
             scale: 1,
@@ -35,15 +35,15 @@ const Rally = () => {
                 <h2 className='font-coolvetica leading-none z-20 text-hero text-center'>
                     Ready to
                     <br />
-                    Rally?
+                    JOIN?
                 </h2>
                 <div
-                    className='sm:h-[600px] h-[450px] -mt-16 relative w-full'
+                    className='sm:h-[600px] h-[450px] -mt-20 relative w-full'
                     ref={imageWrapRef}
                 >
                     <Image
                         ref={imageRef}
-                        src='/images/rally.avif'
+                        src='/images/rally1.avif'
                         alt='Rally images'
                         fill
                         className='w-full h-full scale-150'
@@ -52,7 +52,7 @@ const Rally = () => {
                 <Link href={'/contact'}>
                     <Button
                         color='secondary'
-                        className='bg-white text-black border-highlight-green'
+                        className='bg-white text-black border-zinc-800 shadow-lg'
                         fullWidth
                     >
                         Join our community

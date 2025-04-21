@@ -7,15 +7,18 @@ import Container from '@/components/layouts/container';
 
 const Locations = () => {
     return (
-        <Section className='relative'>
+        <Section className='relative '>
             <Image
-                src='/images/locations.jpg'
+                src='/images/location1.jpg'
                 alt=''
                 fill
                 className='object-cover blur object-top'
             />
-            <Container className='relative'>
-                <div className='grid sm:grid-cols-2 gap-6'>
+            <Container className='relative  rounded-3xl'>
+                <div
+                    className='grid sm:grid-cols-2 gap-6 scroll-mt-40 bg-zinc-900/70 rounded-3xl p-4'
+                    id='activities'
+                >
                     <div className='flex flex-col gap-3'>
                         <h2 className='text-section font-coolvetica text-white'>
                             Our Activities
