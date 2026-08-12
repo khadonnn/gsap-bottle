@@ -29,6 +29,8 @@ biệt chú trọng vào trải nghiệm tương tác khi cuộn trang thông qu
 | Trang chủ (Homepage) | Trang About | Trang Contact |
 | :---: | :---: | :---: |
 | ![Homepage](demo/homepage.png) | ![About](demo/about.png) | ![Contact](demo/contact.png) |
+| Trang Workshops/Activities | Trang Results | |
+| ![Workshops](demo/workshops.png) | ![Results](demo/results.png) | |
 
 ---
 
